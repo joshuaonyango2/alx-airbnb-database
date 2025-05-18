@@ -22,7 +22,7 @@ INNER JOIN
     users  ON user_id = user_id;
     
 
-  **Query using LEFT JOIN to retrieve all properties and their reviews**
+**Query using LEFT JOIN to retrieve all properties and their reviews**
   
   SELECT 
   
@@ -39,13 +39,14 @@ INNER JOIN
 FROM 
 
     properties 
+      
 LEFT JOIN
 
     reviews  ON property_id = property_id;
 
     
 
-    **Query using FULL OUTER JOIN to retrieve all users and all bookings**
+**Query using FULL OUTER JOIN to retrieve all users and all bookings**
     
     SELECT 
     
