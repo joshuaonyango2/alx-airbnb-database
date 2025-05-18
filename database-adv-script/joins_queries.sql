@@ -1,4 +1,4 @@
-**Query using INNER JOIN to retrieve all bookings and the respective users**
+**Query using INNER JOIN to retrieve all bookings and the respective users** 
 
 
 SELECT 
