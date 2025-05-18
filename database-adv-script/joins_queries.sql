@@ -39,7 +39,6 @@ INNER JOIN
 FROM 
 
     properties 
-    
 LEFT JOIN
 
     reviews  ON property_id = property_id;
