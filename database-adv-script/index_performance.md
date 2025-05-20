@@ -21,6 +21,8 @@ bookings.booking_date: Date range filters.
 
 users.user_id and properties.property_id: Already indexed as primary keys.
 
+
+
 **Indexes Created**
 
 idx_bookings_user_id: Optimizes JOINs and WHERE clauses on user_id.
@@ -29,11 +31,13 @@ idx_bookings_property_id: Optimizes JOINs and WHERE clauses on property_id.
 
 idx_bookings_booking_date: Optimizes date range queries.
 
+
+
 **Measuring Performance**
 
-Test a query like:
 
-EXPLAIN SELECT u.user_id, u.name
+
+EXPLAIN SELECT user_id, name
 
 FROM users 
 
@@ -43,11 +47,4 @@ WHERE (SELECT COUNT(*) FROM bookings  WHERE user_id = user_id) > 3;
 Before Indexing: Run EXPLAIN. Expect Seq Scan (PostgreSQL) or type: ALL (MySQL) on bookings.
 
 
-Usage
-
-Run database_index.sql in a SQL client (e.g., MySQL, PostgreSQL).
-
-Test query performance with EXPLAIN or EXPLAIN ANALYZE.
-
-Monitor write performance (INSERT, UPDATE, DELETE) for overhead.
 
